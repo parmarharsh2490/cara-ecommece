@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-scrollbar {
+        display: none;
+    };
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+.slider1{
+    background-image: url("https://cdn-media.powerlook.in/mycustomfolder/Plain_T-shirts2023.jpg");
+}
+.slider2{
+    background-image: url("https://cdn-media.powerlook.in/mycustomfolder/checked_shirts2023.jpg");
+}
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.animation-slide-in {
+    animation: slideInFromLeft 0.5s forwards;
+}
+
+.animation-slide-out {
+    animation: slideOutToLeft 0.5s forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.transition-all {
+    transition: all 0.5s ease-in-out;
+}
